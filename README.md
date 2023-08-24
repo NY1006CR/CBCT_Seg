@@ -1,5 +1,5 @@
 ## 基于paddlepaddle的CBCT图像分割
-#### 数据
+### 数据
 
 ------
 
@@ -31,7 +31,7 @@ data
 |	  ...
 ```
 
-#### 训练
+### 训练
 
 ------
 
@@ -53,13 +53,13 @@ python -m pip install paddlepaddle-gpu==2.5.1.post117 -f https://www.paddlepaddl
 pip install onnxruntime
 ```
 
-##### 训练策略
+#### 训练策略
 
 - 我们最初使用了预热训练，主要分为两个阶段；第一阶段先使用较小的学习率（5e-5）进行5个epoch的训练，第二阶段使用区间为[2e-4, 1.25e-5]的递减学习率进行训练，但之后发现预热策略对小样本数据集的作用不是很大。所以最后选用2e-4作为初始学习率，每10个epoch进行递减到1.25e-5
 - 损失函数选用dice和交叉熵的加权结合（最初尝试了Focal loss但效果不理想）
 - Batch_size为4，epoch为100
 
-#### 实验结果
+### 实验结果
 
 ------
 
@@ -76,7 +76,7 @@ pip install onnxruntime
 
 ![image](https://github.com/NY1006CR/CBCT_Seg/assets/40394910/e4c71784-3a39-4e89-9f49-dbfa5cbe45df)
 
-#### 可能的改进
+### 可能的改进
 
 ------
 
