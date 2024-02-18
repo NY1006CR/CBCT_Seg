@@ -96,11 +96,11 @@ pip install onnxruntime
 
 我们在原有的师生框架上添加一个分支，即微调的SAM，用以生成高质量伪标签。如图：
 
-![overall__1](D:\小论文\Paper_SAM_SemiL\visio\overall_(1)\overall__1.jpg)
+![overall__1](https://github.com/NY1006CR/CBCT_Seg/blob/master/PNG/overall__1.jpg)
 
 第一步：在SAM的图像编码器和掩码解码器中配置LoRA层，再结合有标注的数据集进行微调，得到在特定CBCT图像分割任务上表现良好的SAM（如图所示）
 
-![loar_sam__1](D:\小论文\Paper_SAM_SemiL\visio\loar_sam_\loar_sam__1.jpg)
+![loar_sam__1](https://github.com/NY1006CR/CBCT_Seg/blob/master/PNG/loar_sam__1.jpg)
 
 第二步：用微调后的模型预测我们大量未标注的CBCT图像，得到大量伪标签集合1
 
@@ -114,7 +114,7 @@ pip install onnxruntime
 
 
 
-![pesudo select__1](D:\小论文\Paper_SAM_SemiL\visio\pesudo select_(1)\pesudo select__1.jpg)
+![pesudo select__1](https://github.com/NY1006CR/CBCT_Seg/blob/master/PNG/pesudo%20select__1.jpg)
 
 #### 实验结果
 
